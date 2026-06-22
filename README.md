@@ -105,14 +105,13 @@ single `Execute` event.
   iTerm2, and VS Code's integrated terminal out of the box. Legacy
   `cmd.exe` would need `SetConsoleMode(..., ENABLE_VIRTUAL_TERMINAL_PROCESSING)`.
 
-## Status / TODO
+## Features
 
-- [x] Core book (add / cancel / modify / execute, all invariants)
-- [x] CSV + LOBSTER parsers
-- [x] ANSI visualizer
-- [x] Metrics: spread, mid, imbalance, rolling VWAP
-- [x] Unit tests
-- [x] Throughput benchmark
-- [ ] Pool allocator for list nodes (current main perf bottleneck)
-- [ ] SoA/flat-array refactor for the hot dispatch path
-- [ ] Multi-symbol support
+- Full add / cancel / modify / execute event handling with debug-time
+  invariant checking
+- CSV and LOBSTER (Nasdaq) parsers, zero allocation per row
+- ANSI terminal visualizer with top-of-book depth bars
+- Microstructure metrics: spread, mid, top-of-book imbalance, rolling VWAP
+- Self-contained unit tests (no external test framework dependency)
+- Release-mode throughput benchmark with warm-up pass and checksum
+  anti-dead-code-elimination guard
