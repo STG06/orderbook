@@ -1,0 +1,21 @@
+build/
+build-*/
+out/
+*.o
+*.obj
+*.exe
+*.pdb
+*.ilk
+.vs/
+.vscode/
+.idea/
+.cache/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# data files: only commit the sample
+data/*.csv
+data/*.txt
+!data/sample.csv
