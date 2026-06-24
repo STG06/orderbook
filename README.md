@@ -1,4 +1,4 @@
-# orderbook
+# Orderbook
 
 A limit order book reconstruction engine in C++20. It reads a stream of market
 data events (add / cancel / modify / execute), maintains the full live book
